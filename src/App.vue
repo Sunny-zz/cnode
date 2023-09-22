@@ -1,12 +1,18 @@
 <template>
   <div>
-    <el-button>按钮</el-button>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 export default {
-
+  created () {
+    this.getInfo()
+  },
+  methods: {
+    ...mapMutations(['getInfo'])
+  },
 }
 </script>
 
